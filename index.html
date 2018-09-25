@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<!-- bootstrap CSS CDN link -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Welcome</title>
+	
 </head>
-	<body>
-		<div class="container">
-			<img src="res/laptop-in-dark.jpg" class="img-fluid" alt="Responsive image">		
-			<div class="centered"><h1 class="display-2">Startup event</h1></div>
-			<div class="line"></div>
-			
-			<!-- Begin MailChimp Signup Form -->
-			<!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-			this takes too long (>8 sec) to load and we have CSS styling for the button -->
-			<style type="text/css">
-				#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
-				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-				   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-			</style>
-			<div id="mc_embed_signup">
-			<form action="https://cooltest.us18.list-manage.com/subscribe/post?u=5b19fda3c5249c56a5d2580ae&amp;id=2f87dfe799" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				<div id="mc_embed_signup_scroll">
-				
-				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5b19fda3c5249c56a5d2580ae_2f87dfe799" tabindex="-1" value=""></div>
-				<div class="clear"><input type="submit" value="Learn More" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" ></div>
-				</div>
-			</form>
-			</div>
+<body>
+<nav class="navbar navbar-fixed-top" id="navbar">
+  <ul class="nav nav-pills">
+    <li role="presentation"><a class="navbar-link" href="#welcome-section" onclick="changeTitle()">Welcome</a></li>
+    <li role="presentation"><a class="navbar-link" href="#projects" onclick="changeTitle()">Projects</a></li>
+    <li role="presentation"><a class="navbar-link" href="#blog" onclick="changeTitle()">Blog</a></li>
+	</ul>
+</nav>
 
-			<!--End mc_embed_signup-->
-			
+<section id="welcome-section">
+  <div class="welcome">
+    <h1>Welcome!</h1>
+    <p>This is a humble portfolio page.<br>Scroll bellow for more.</p>
+  </div>
+</section>
 
-		</div>	
-			
-		<!-- bootstrap JS CDN links -->
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M" crossorigin="anonymous"></script>
-		
-	</body>
+<div class="breaker"></div>
+
+<section id="projects">
+  <h2>Projects</h2>
+   <div class="cards-container">
+    <a id="sudoku" href="https://kboeff.github.io/sudoku-solver/" target="_blank"><div class="project-tile"><img src="https://lh3.googleusercontent.com/oR6sZuJgLDqK-AshgcypOUbiCPsGXS4vbn8Hfk3ldIYz4YJgyzoP9ybM_qePkmGG8pIEW6mXN-RRse1bp062VySd6p-pAPjH4NQATYeYZLBTn43prKhJGurhvxH-ZZJr_h_7SJY8XGOJ1jGkAYWcYIgMVeqVVPxj3_6san9U-wA39gQ5TPVARUjd45Pflo2fl0ZxRgFW3IhRwkV1iS9SKABWRfIrZ6x2wYoQ12gVUUwP06AZDpROxoEHH4aFGNDA-2poNrT-cMv5AKu3pSi9ZaksmlhqspoCiZZcpI1X8z_4s0YdN4eGY-2JFCIxzEJzJYE-6AGTqvJjXBX2ks_Y6bMQXNTvIh0HiWvy1fi6GxTu40JevbqW-mU3bFe9yUHEuYnDIRJgj7ybXbW8U5WWVWxvq6GTr_7LJgKVQXwnDW5x-i_Rm5wf2w1MtzN2j-1LyaJoo_ybAhw-Toe3sOE3bU5z_zLZEId7oPVd6dbYriQ5RjNskDu_BDzF23VfOB0hGyisGpUOHTpCTiDC3nHwrEyRX7GyTHcQd6QuzQ5gTmK14kZg4HsK1ddOtBujUekrP_59JYmxAi6nTKwviK59B9LqSZxyVqyzLqY9KNwULn5-N70EksVvWAo-48YzU-I=w1129-h829-no" width="100%"><h4>Sudoku solver</h4><p>Solves sudokus using image recognition.</p></div></a>
+      <a id="zero-feed" href="https://kboeff.github.io/zero-feed/" target="_blank"><div class="project-tile"><img src="https://lh3.googleusercontent.com/E-FfETDDSdkHTPpD1JW4gE_HcQQGNhoipI4P2z0ImKeCVfKAZ3jiQFwfT8QnZoVB3PM75X4mT2tFjx7JygxRyIiady7tXmXl-y8PfDXOldBWJr63OqWXCEeCWtKS5Ne31Dik1CA8akvvaFfcQpA4kRk1DE-KCd1Dyrt6bl_t8Vv81oWv5K4Tz1sTNy8kCRuYT5bbEhHQ863hQoRQQ1UixtE9Z3CWBKMm39g-MREoEduyBQuEuYDH-lYlDJm9EmDVLRPc-pMabS4_ClTZI6sicTUSeZuQJHwODApxXlWVpBoZMWGnTKrfqM_EYC_gqkRxElYkhvDX9uRXXm1ZDgjqIHmPOxEjyLN9CNG-pwgl1GuXQ7RZ2RTQK4uaVdRqzd6jF50NTZd3rhi5RdsqhMcpdxwKExIYcvnN0IIRWOKJg5Q2gas8gMgLozxEnBZS5R327efQVG7puUevr9suchWxVnoSmSFAdyrghOzYawGLkfCcb-8ZVG9spiIhYIKjFlj6ZcRBlgFhEOXNtx3tgBtQTnHi1nlj8lLBJnlwA7inAAzX2lTZubtwm79CbYIkbR51JfFlBPP0yU10OgmgsEoSMTp8gpibe7lsrvrLA64e5b0le2hE484meZs3cNjY-CY=w1133-h831-no" width="100%"><h4>Zero Feed</h4><p>One feed from many social media platforms.</p></div></a>
+  
+     <a id="gallery" href="https://kboeff.github.io/gallery/" target="_blank"><div class="project-tile"><img src="https://lh3.googleusercontent.com/U7XJh4NSkTe2EtQACjTTCEZ3wTTmGWTgh_hTCDWGxpyhIePp4kBsf4u8vEvlKPMcEmxT8Mnhi9eLiY8NlvDnAHfAFb1q0VxBdOeVxdaPADwUWJ1VqQHUWw-46s5rsJv2ocutgFLjGRMBdij1ehk1NnKlpxF8r0VRDlpcHPw2Pe6iwJG5iSUhH-HwPmZW4e1mveAbETwe_DRXpaq3ekdQGKU7K9a2mnyF6cM3eHeYnjlg-GxDiRxn2PXDMMBWDuxm3eiYNOr0wRWGtW1KVu39t84yWE8Wj03b4D0WDZIMZtcfhP1OFpwd4Zl5D2oHvEZMlhPzAp4oAR1D4yMVyjgeaSnpAivz1p0anqrtRNxQ3ADxBgtqG1_6Y_GMuLqNQ7cOncrp5Ls5bA00tmh0gLryRdTEBdkONoS4gpgto0ZfQfR6X2WY5DYPaWhItBm2R5ZQ3Tm3lsyj-52kTyu5psrXelVI1vVa19esY_p7hZ4myJjwHpDoZYmxDpTqAKMBPr3OfLJjDA5O4PSyeyr-ZrrcEoB9980obTZVhtqX7eXfzyUeF9Wovzj1ux8xeKFMQDvmwFYvuzcb6bHW-obezsot_oRF7EvK88Fssg0d0945qyyD91nr_yPhh3tJk4CDUbg=w1133-h828-no" width="100%"><h4>Gallery</h4><p>Just a cool image gallery.</p></div></a>
+  </div>
+</section>
+
+<div class="breaker"></div>
+
+<section id="blog">
+	<h1>Blog</h1>
+
+	<div class="blog-item wrapper">
+	<img src='you-NaN.png' alt='you are not you when you are NaN'/>
+	<h3>Checking for a number value in JavaScript</h3>
+	<p class="sub-title">isNaN() vs typeof with examples</p>
+	<p>Everything could be tricky if you have certain expectations and preconceptions,
+	 but even the most open minded JavaScript learners could be surprised by the built in isNaN function.
+	 My frustration with the NaN came with <a href='https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/everything-be-true' target="_blank">this exercise</a> from freeCodeCamp.
+	 In essence - check object properties for falsy values.</p>
+	 <code>truthCheck([..., {"single": NaN}], "single") //should return false</code>
+	<p> So, I added a condition to check with isNaN, as you do.</p>
+	 <code>if(isNaN(obj[single])) return false;</code>
+	 <p>It worked fine for this instance, but messed up other test cases, because the function returned false for <em>some</em> strings.
+	So I needed a way to explicitly check for <em>the</em> <code>NaN</code>, rather than <em>any</em> <code>NaN</code>-type value.</p>
+	 <p>Here's a great <a href='http://adripofjavascript.com/blog/drips/the-problem-with-testing-for-nan-in-javascript.html' target="_blank">article</a> from Joshua Clanton, which really helped.
+	 <em>However, despite the name, the purpose of the isNaN function isn't to check whether a value is NaN. Instead, the purpose is to check whether a value cannot be coerced to a number.</em>
+	 This quote points at the cause of confusion. And here's the line of code that solved my issues:</p>
+	 <code>if(obj[single] !== obj[single]) return false; //hence the title image</code>
+	 <p>Keep in mind this expression will be also true for objects (i.e. <code>{} !== {} //true</code>), so it's not a solution for a general case of finding falsy values.
+	 <br>Another important takeaway from the article for me: isNaN will coerce non-numeric arguments.</p>
+	 <code>isNaN('2'); // returns false</code>
+	 <p>That's when you would use this kind of check <code>typeof x === 'number'</code> instead.</p>
+	</div>
+
+	<a id="profile-link" href="https://github.com/kboeff/" target="_blank"><img width="100px" id="gitlogo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git logo"></a>
+</section>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
 </html>
