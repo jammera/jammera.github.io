@@ -1,91 +1,39 @@
-html,
 body {
-	font-size: 12px !important;
-	background-color: #000000;
+  padding-left: 2vw;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif,"Segoe UI Symbol";
 }
-/* responsive font-size */
-h1, #learn-more {
-	font-size: 1.0em;
+body > * {
+  max-width: 75%
 }
-
-
-.display-2 {
-	font-size: 2.6em;
+.breaker {
+    height: 3vh;
+  }
+@media only screen and (max-width: 600px) {
+  .breaker {
+    height: 1vw;
+  }
 }
-
-.line {
-	width: 5%;
-	height: 3px;
-	border-radius: 2px;
-	background-color: #007bff;
-    position: absolute;
-    top: 59%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@media (min-width: 48em) {
-	h1 {
-	  font-size: 2.0em;
-	}
-	.display-2 {
-		font-size: 5.2em;
-	}
-	
-	.btn-primary {
-		font-size: 1.0em;
-	}
-}
-/* Large devices (desktops, 62em and up) */
-@media (min-width: 62em) {
-	html,
-	body {
-		font-size: 14px !important;
-	}
-	.btn-primary {
-		font-size: 10px;
-	}
-}
-/* Extra large devices (large desktops, 75em and up) */
-@media (min-width: 75em) {
-	html,
-	body {
-		font-size: 16px !important;
-	}
-	.btn-primary {
-		font-size: 1.0em;
-	}
-}
-
-.img-fluid {
-	max-width: 100%; 
-	height: auto;
+#welcome-section, #projects, #blog {
+  padding-top: 40px;
+  height: 100vh;
  }
- 
-.container {
-	 position: relative;
-	 text-align: center;
-	 color: white;
- }
- 
-/* Centered text */
-.centered {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#projects {
+  padding-top: 4vh;
 }
-
-
-
-.btn-primary {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	
+.cards-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
 }
-
-.btn-primary:hover {
-	color: #051C38;
+.project-tile {
+  display: inline-block;
+  width: 15vw;
+  height: 17vw;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+.project-tile:hover {
+	transform: scale(1.5);
 }
