@@ -6,10 +6,9 @@ body {
 .navbar {
 	border: 0px solid;
 	border-radius: 10px;
-	
 	padding: 0;
 	position: fixed;
-	width: 90%;
+	width: 98%;
 	min-width: 360px;
 	background-color: rgba(255, 192, 0, 0.7);
 	display: flex;
@@ -65,7 +64,6 @@ section {
   padding-top: 100px;
 }
 
-
 #welcome-container {
   background-image: url("computer0.jpg"); 
   background-color: #cccccc; 
@@ -76,26 +74,53 @@ section {
 }
 
 #welcome-heading {
-	padding-top: 40px;
+	padding-top: 20vh;
 }
+
+#welcome-text {
+	color: #000;
+}	
  
 .cards-container {
-  width: 75%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
+.cards-container > * {
+	text-decoration: none;
+	color: #000;
+}
+
 .project-tile {
-  display: inline-block;
-  width: 15vw;
-  height: 17vw;
+  width: 20vw;
+  height: 30vh;
+  min-width: 220px;
+  min-height: 330px;
   border: 1px solid #eee;
   border-radius: 10px;
   text-align: center;
-  transition: 0.5s;
+
 }
+
 .project-tile:hover {
-	transform: scale(1.5);
+	box-shadow: 2px 2px 3px #00afff;
+	background-color: rgba(255, 192, 0, 0.1);
+	color: #00afff;
+	
 }
+
+.project-tile > img {
+	border: 0px solid #eee;
+	border-radius: 10px;
+}
+
+.project-tile > h4 {
+	top: 50%;
+}
+
 
 #github-div {
 	display: flex;
