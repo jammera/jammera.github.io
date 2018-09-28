@@ -1,129 +1,86 @@
-body {
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif,"Segoe UI Symbol";
-}
-
-/* START navigation formatting */
-.navbar {
-	border: 0px solid;
-	border-radius: 10px;
-	padding: 0;
-	position: fixed;
-	width: 98%;
-	min-width: 360px;
-	background-color: rgba(255, 192, 0, 0.7);
-	display: flex;
-	justify-content: left;
-	transition: top 0.3s;
-	transition-timing-function: ease-in-out;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding-top: 10px;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-	padding-left: -20px;
-}
-
-li a {
-    display: block;
-    color: #000;
-	font-weight: 600 !important;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-   color: #00afff;
-}
-
-#logo {
-	padding: 15px 0px 0px 15px;
-	height: 30px;
-	width: auto;
-}
-
-/* END navigation formatting */
-
-.breaker {
-    height: 3vh;
-}
-
-@media only screen and (max-width: 600px) {
-  .breaker {
-    height: 1vw;
-  }
-}
-
-section {
-  padding-top: 100px;
-}
-
-#welcome-container {
-  background-image: url("computer0.jpg"); 
-  background-color: #cccccc; 
-  height: 60vh; 
-  background-position: center;
-  background-repeat: no-repeat; 
-  background-size: cover; 
-}
-
-#welcome-heading {
-	padding-top: 20vh;
-}
-
-#welcome-text {
-	color: #000;
-}	
- 
-.cards-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.cards-container > * {
-	text-decoration: none;
-	color: #000;
-}
-
-.project-tile {
-  width: 20vw;
-  height: 30vh;
-  min-width: 220px;
-  min-height: 330px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  text-align: center;
-
-}
-
-.project-tile:hover {
-	box-shadow: 2px 2px 3px #00afff;
-	background-color: rgba(255, 192, 0, 0.1);
-	color: #00afff;
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Welcome</title>
 	
-}
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <img class="navbar-link" src='logo1.png' alt='kbo logo' id='logo'/>
+  <ul class="nav-menu">
+    <li><a class="navbar-link" href="#welcome-section">Welcome</a></li>
+    <li><a class="navbar-link" href="#projects">Projects</a></li>
+    <li><a class="navbar-link" href="#blog">Blog</a></li>
+	</ul>
+</nav>
 
-.project-tile > img {
-	border: 0px solid #eee;
-	border-radius: 10px;
-}
 
-.project-tile > h4 {
-	top: 50%;
-}
+<section id="welcome-section">
+  <div class="welcome" id="welcome-container">
+    <h1 id="welcome-heading">Welcome!</h1>
+    <p id="welcome-text">This is a humble portfolio page.<br>Scroll bellow for more.</p>
+  </div>
+</section>
 
+<div class="breaker"></div>
 
-#github-div {
-	display: flex;
-	justify-content: left;
-}
+<section id="projects">
+  <h2>Projects</h2>
+   <div class="cards-container">
+    <a id="zero-feed" href="https://kboeff.github.io/zero-feed/" target="_blank"><div class="project-tile"><img class='project-picture' src="https://lh3.googleusercontent.com/E-FfETDDSdkHTPpD1JW4gE_HcQQGNhoipI4P2z0ImKeCVfKAZ3jiQFwfT8QnZoVB3PM75X4mT2tFjx7JygxRyIiady7tXmXl-y8PfDXOldBWJr63OqWXCEeCWtKS5Ne31Dik1CA8akvvaFfcQpA4kRk1DE-KCd1Dyrt6bl_t8Vv81oWv5K4Tz1sTNy8kCRuYT5bbEhHQ863hQoRQQ1UixtE9Z3CWBKMm39g-MREoEduyBQuEuYDH-lYlDJm9EmDVLRPc-pMabS4_ClTZI6sicTUSeZuQJHwODApxXlWVpBoZMWGnTKrfqM_EYC_gqkRxElYkhvDX9uRXXm1ZDgjqIHmPOxEjyLN9CNG-pwgl1GuXQ7RZ2RTQK4uaVdRqzd6jF50NTZd3rhi5RdsqhMcpdxwKExIYcvnN0IIRWOKJg5Q2gas8gMgLozxEnBZS5R327efQVG7puUevr9suchWxVnoSmSFAdyrghOzYawGLkfCcb-8ZVG9spiIhYIKjFlj6ZcRBlgFhEOXNtx3tgBtQTnHi1nlj8lLBJnlwA7inAAzX2lTZubtwm79CbYIkbR51JfFlBPP0yU10OgmgsEoSMTp8gpibe7lsrvrLA64e5b0le2hE484meZs3cNjY-CY=w1133-h831-no" width="100%"><h4>Zero Feed</h4><p>One feed from many social media platforms. Combines user data from Facebook, Twitter and others.</p></div></a>
+	<a id="sudoku" href="https://kboeff.github.io/sudoku-solver/" target="_blank"><div class="project-tile"><img class='project-picture' src="https://lh3.googleusercontent.com/UsBlITb8W0AhAMWYoRrzLonZ4sqXDaOtR8fEKC5Ukgr-9p9tyZpN7D_yg9kNgScEIU2Sj8O8N1pfjXY49YKSZfae6n8fDER0kIr7Wgo_etXRy7o4-_TIu9NYJRz7h_yRXjTAiNYZHRmVODf5Ycbv-Ir4qeQH3_BQVSunrfTKdWgtA4xl6p3a2HHxolWJTlc7ADpT2cwPqYkak-fdA3Gy-UPLYx5cIrRPSQFd6FWhB5Z4zFqUHpwbgotnIOykLH490U0U4zry6lEs4Xp_xGBSW8XMnxUjrEY3q5_VYDTus8cHZhrLT_hJde0srxCE2ozQeO24H80x6SwX5L9yOtAY-htmrMFfnz5b_piAo06q26DtJxIWsX2FXR6N11qyIp91tGZLAEYR5VYjHsv24OcqNcN_bGTXAezyRHxFujrxknwTjICa6mjfahxR7nXlWBzykr449CdCBcw6P6yLHHZcO7dIJobWmueO7miL_wtkDom6Ux-05wUpaqQ3yqps6XJ5pt-px7D5yy_Es5zAK_W6uHqg0aLwme9RplN89uIAsjhiyi8J98bkZN5rxNW33RKu4P7LuThKsyAAsh7I4gAwNwWyfw_szTXSx_uuu55wsM_TWDlEhKdrreaij2lAJuw=w571-h484-no" width="100%"><h4>Digit recognizer</h4><p>Destined to become a sudoku solver one day, when all the digits are recognized.</p></div></a>
+    <a id="gallery" href="https://kboeff.github.io/gallery/" target="_blank"><div class="project-tile"><img class='project-picture' src="https://lh3.googleusercontent.com/U7XJh4NSkTe2EtQACjTTCEZ3wTTmGWTgh_hTCDWGxpyhIePp4kBsf4u8vEvlKPMcEmxT8Mnhi9eLiY8NlvDnAHfAFb1q0VxBdOeVxdaPADwUWJ1VqQHUWw-46s5rsJv2ocutgFLjGRMBdij1ehk1NnKlpxF8r0VRDlpcHPw2Pe6iwJG5iSUhH-HwPmZW4e1mveAbETwe_DRXpaq3ekdQGKU7K9a2mnyF6cM3eHeYnjlg-GxDiRxn2PXDMMBWDuxm3eiYNOr0wRWGtW1KVu39t84yWE8Wj03b4D0WDZIMZtcfhP1OFpwd4Zl5D2oHvEZMlhPzAp4oAR1D4yMVyjgeaSnpAivz1p0anqrtRNxQ3ADxBgtqG1_6Y_GMuLqNQ7cOncrp5Ls5bA00tmh0gLryRdTEBdkONoS4gpgto0ZfQfR6X2WY5DYPaWhItBm2R5ZQ3Tm3lsyj-52kTyu5psrXelVI1vVa19esY_p7hZ4myJjwHpDoZYmxDpTqAKMBPr3OfLJjDA5O4PSyeyr-ZrrcEoB9980obTZVhtqX7eXfzyUeF9Wovzj1ux8xeKFMQDvmwFYvuzcb6bHW-obezsot_oRF7EvK88Fssg0d0945qyyD91nr_yPhh3tJk4CDUbg=w1133-h828-no" width="100%"><h4>Gallery</h4><p>Just a cool image gallery.</p></div></a>
+  </div>
+</section>
 
+<div class="breaker"></div>
+
+<section id="blog">
+	<h1>Blog</h1>
+
+	<div class="blog-item wrapper">
+	<img src='you-NaN.png' alt='you are not you when you are NaN'/>
+	<h3>Checking for a number value in JavaScript</h3>
+	<p class="sub-title">isNaN() vs typeof with examples</p>
+	<p>Everything could be tricky if you have certain expectations and preconceptions,
+	 but even the most open minded JavaScript learners could be surprised by the built in isNaN function.
+	 My frustration with the NaN came with <a href='https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/everything-be-true' target="_blank">this exercise</a> from freeCodeCamp.
+	 In essence - check object properties for falsy values.</p>
+	 <code>truthCheck([..., {"single": NaN}], "single") //should return false</code>
+	<p> So, I added a condition to check with isNaN, as you do.</p>
+	 <code>if(isNaN(obj[single])) return false;</code>
+	 <p>It worked fine for this instance, but messed up other test cases, because the function returned false for <em>some</em> strings.
+	So I needed a way to explicitly check for <em>the</em> <code>NaN</code>, rather than <em>any</em> <code>NaN</code>-type value.</p>
+	 <p>Here's a great <a href='http://adripofjavascript.com/blog/drips/the-problem-with-testing-for-nan-in-javascript.html' target="_blank">article</a> from Joshua Clanton, which really helped.
+	 <em>However, despite the name, the purpose of the isNaN function isn't to check whether a value is NaN. Instead, the purpose is to check whether a value cannot be coerced to a number.</em>
+	 This quote points at the cause of confusion. And here's the line of code that solved my issues:</p>
+	 <code>if(obj[single] !== obj[single]) return false; //hence the title image</code>
+	 <p>Keep in mind this expression will be also true for objects (i.e. <code>{} !== {} //true</code>), so it's not a solution for a general case of finding falsy values.
+	 <br>Another important takeaway from the article for me: isNaN will coerce non-numeric arguments.</p>
+	 <code>isNaN('2'); // returns false</code>
+	 <p>That's when you would use this kind of check <code>typeof x === 'number'</code> instead.</p>
+	</div>
+
+	
+</section>
+
+<div class="breaker"></div>
+
+<section id="footer">
+<div id="github-div">
+	<p>Made by </p>
+	<a id="profile-link" href="https://github.com/kboeff/" target="_blank"><img width="50px" id="gitlogo" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git logo"></a>
+</div>
+<div id='credits'>
+	Photo credit goes to:
+	<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@clemhlrdt?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Clément H"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Clément H</span></a>
+	<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from rawpixel"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">rawpixel</span></a>
+	<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@tayaiv?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Taya Iv"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Taya Iv</span></a>
+</div>
+</section>
+<!--  JavaScript -->
+
+<script src="script.js"></script>
+</body>
+</html>
