@@ -98,6 +98,7 @@ section {
   width: 20vw;
   height: 30vh;
   min-width: 220px;
+  max-width: 235px;
   min-height: 330px;
   border: 1px solid #eee;
   border-radius: 10px;
@@ -112,14 +113,24 @@ section {
 	
 }
 
-.project-tile > img {
+.image-container > img {
 	border: 0px solid #eee;
 	border-radius: 10px;
 }
 
-.project-tile > h4 {
-	top: 50%;
+.image-container {
+	height: 50%;
+	background-color: #fff;
 }
+
+.arrow {
+	margin-top: 15vh;
+	height: 8vh;
+	width: auto;
+	border: 0px solid;
+	border-radius: 50%;
+}
+
 
 
 #github-div {
