@@ -27,13 +27,65 @@
 
 <section id="projects">
   <h2>Projects</h2>
-   <div class="cards-container">
-	<img class='arrow' src="left-arrow.png" width="100%">
-    <a id="zero-feed" href="https://kboeff.github.io/zero-feed/" target="_blank"><div class="project-tile"><div class="image-container"><img class='project-picture' src="zero-print.png" width="100%"></div><h4>Zero Feed</h4><p>One feed from many social media platforms. Combines user data from Facebook, Twitter and others.</p></div></a>
-	<a id="sudoku" href="https://kboeff.github.io/sudoku-solver/" target="_blank"><div class="project-tile"><div class="image-container"><img class='project-picture' src="solver-print.png" width="100%"></div><h4>Digit recognizer</h4><p>Destined to become a sudoku solver one day, when all the digits are recognized.</p></div></a>
-    <a id="gallery" href="https://kboeff.github.io/gallery/" target="_blank"><div class="project-tile"><div class="image-container"><img class='project-picture' src="gallery-print.png" width="100%"></div><h4>Gallery</h4><p>Just a cool image gallery.</p></div></a>
-	<div class="project-tile"><div class="arrow"><img class='project-picture' src="" width="100%"></div><h4>Zero Feed</h4><p>Next</p></div>
+  <div class="slider" data-state="0">  
+   
+      <svg id="prev" viewBox='0 0 100 100'>
+        <circle cx="50" cy="50" r="85" />
+        <path d="M 65,2 17,50 65,98" />
+      </svg>
+      <svg id="next" viewBox='0 0 100 100'>
+        <circle cx="50" cy="50" r="85" />
+        <path d="M 35,2 82,50 35,98" />
+      </svg>
+    
+    <div class="status">
+      <div class="stat" data-key="0"></div>
+      <div class="stat" data-key="1"></div>
+      <div class="stat" data-key="2"></div>
+      <div class="stat" data-key="3"></div>
+      <div class="stat" data-key="4"></div>
+      <div class="stat" data-key="5"></div>
+    </div>
+    <div class='caption' data-key='0'>
+		<a href='kboeff.github.io/zero-feed' target='_blank'><h4>Zero Feed</h4><p>One feed from many social media platforms. Combines user data from Facebook, Twitter and others.</p></a>
+	</div>
+    <div class='caption' data-key='1'>
+		<a href='kboeff.github.io/sudoku-solver' target='_blank'><h4>Solver</h4><p>Destined to become a sudoku solver one day, when all the digits are recognized.</p></a>
+	</div>
+    <div class='caption' data-key='2'>
+		<a href='kboeff.github.io/gallery' target='_blank'><h4>Gallery</h4><p>A simple responsive image gallery.</p></a>
+	</div>
+    <div class='caption' data-key='3'>
+		<a href='kboeff.github.io/zero-feed' target='_blank'><h4>Zero Feed</h4><p>One feed from many social media platforms. Combines user data from Facebook, Twitter and others.</p></a>
+	</div>
+    <div class='caption' data-key='4'>
+		<a href='kboeff.github.io/sudoku-solver' target='_blank'><h4>Solver</h4><p>Destined to become a sudoku solver one day, when all the digits are recognized.</p></a>
+	</div>
+    <div class='caption' data-key='5'>
+		<a href='kboeff.github.io/gallery' target='_blank'><h4>Gallery</h4><p>A simple responsive image gallery.</p></a>
+	</div>
+    
+    <div class="image" data-key="0" >
+      <img src="zero-grey.png" alt="Zero feed"/>
+    </div>
+    <div class="image" data-key="1">
+      <img src="solver-grey.png" alt="Solver"/>
+    </div>
+    <div class="image" data-key="2">
+      <img src="gallery-grey.png" alt="Gallery"/>
+    </div>
+    <div class="image" data-key="3">
+      <img src="zero-grey.png"" alt="Zero feed"/>
+    </div>
+    <div class="image" data-key="4">
+      <img src="solver-grey.png" alt="Solver"/>
+    </div>
+    <div class="image" data-key="5">
+      <img src="gallery-grey.png" alt="Gallery"/>
+    </div>
   </div>
+
+  
 </section>
 
 <div class="breaker"></div>
