@@ -1,140 +1,201 @@
 body {
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif,"Segoe UI Symbol";
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Symbol";
 }
-
 /* START navigation formatting */
 .navbar {
-	border: 0px solid;
-	border-radius: 10px;
-	padding: 0;
-	position: fixed;
-	width: 98%;
-	min-width: 360px;
-	background-color: rgba(255, 192, 0, 0.7);
-	display: flex;
-	justify-content: left;
-	transition: top 0.3s;
-	transition-timing-function: ease-in-out;
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 0;
+  position: fixed;
+  width: 98%;
+  min-width: 360px;
+  background-color: rgba(255, 192, 0, 0.7);
+  display: flex;
+  justify-content: left;
+  transition: top 0.3s;
+  transition-timing-function: ease-in-out;
 }
-
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding-top: 10px;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 10px;
+  overflow: hidden;
 }
-
 li {
-    float: left;
-	padding-left: -20px;
+  float: left;
+  padding-left: -20px;
 }
-
 li a {
-    display: block;
-    color: #000;
-	font-weight: 600 !important;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
+  display: block;
+  color: #000;
+  font-weight: 600 !important;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
 }
-
 li a:hover {
-   color: #00afff;
+  color: #00afff;
 }
-
 #logo {
-	padding: 15px 0px 0px 15px;
-	height: 30px;
-	width: auto;
+  padding: 15px 0px 0px 15px;
+  height: 30px;
+  width: auto;
 }
-
 /* END navigation formatting */
-
 .breaker {
-    height: 3vh;
+  height: 3vh;
 }
-
 @media only screen and (max-width: 600px) {
   .breaker {
     height: 1vw;
   }
 }
-
 section {
   padding-top: 100px;
 }
-
 #welcome-container {
-  background-image: url("computer0.jpg"); 
-  background-color: #cccccc; 
-  height: 60vh; 
+  background-image: url("computer0.jpg");
+  background-color: #cccccc;
+  height: 60vh;
   background-position: center;
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 #welcome-heading {
-	padding-top: 20vh;
+  padding-top: 20vh;
 }
-
 #welcome-text {
-	color: #000;
-}	
- 
-.cards-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
+  color: #000;
 }
-
-.cards-container > * {
-	text-decoration: none;
-	color: #000;
-}
-
-.project-tile {
-  width: 20vw;
-  height: 30vh;
-  min-width: 220px;
-  max-width: 235px;
-  min-height: 330px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  text-align: center;
-
-}
-
-.project-tile:hover {
-	box-shadow: 2px 2px 3px #00afff;
-	background-color: rgba(255, 192, 0, 0.1);
-	color: #00afff;
-	
-}
-
-.image-container > img {
-	border: 0px solid #eee;
-	border-radius: 10px;
-}
-
-.image-container {
-	height: 50%;
-	background-color: #fff;
-}
-
-.arrow {
-	margin-top: 15vh;
-	height: 8vh;
-	width: auto;
-	border: 0px solid;
-	border-radius: 50%;
-}
-
-
-
 #github-div {
-	display: flex;
-	justify-content: left;
+  display: flex;
+  justify-content: left;
 }
-
+/* slider styling */
+#projects *,
+#projects *:before,
+#projects *:after {
+  box-sizing: border-box;
+  /*position: relative;*/
+  transition-property: clip-path, opacity;
+  transition-duration: 900ms, 300ms;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+.slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.slider .status {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+}
+.slider .status .stat {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 11;
+  margin: 0px 5px;
+  border: 2px solid #00afff;
+}
+.slider .status .stat[data-active] {
+  background-color: #00afff;
+}
+.slider .caption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 11;
+  display: flex;
+}
+.slider .caption * {
+  text-decoration: none;
+  color: #fff;
+}
+.slider img {
+  object-fit: cover;
+  object-position: center 80%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.slider .image {
+  width: 100%;
+  margin-right: -100%;
+  opacity: 0;
+  display: block;
+}
+.slider .image img {
+  clip-path: circle(50px at 5vw 50%);
+}
+.slider .image[data-active] {
+  opacity: 1;
+}
+.slider .image[data-active] img {
+  clip-path: circle(100vmax at 50% 50%);
+}
+.slider .image[data-active] ~ .image {
+  opacity: 0;
+}
+.slider .image[data-active] ~ .image img {
+  clip-path: circle(50px at 95vw 50%);
+}
+.slider .caption {
+  width: 100%;
+  margin-right: -100%;
+  opacity: 0;
+  display: block;
+}
+.slider .caption a {
+  clip-path: circle(50px at 5vw 50%);
+}
+.slider .caption[data-active] {
+  opacity: 1;
+}
+.slider .caption[data-active] a {
+  clip-path: circle(100vmax at 50% 50%);
+}
+.slider .caption[data-active] a:hover {
+  color: #00afff;
+}
+.slider .caption[data-active] ~ .caption {
+  opacity: 0;
+}
+.slider .caption[data-active] ~ .caption a {
+  clip-path: circle(50px at 95vw 50%);
+}
+.slider svg {
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: visible;
+}
+.slider svg path {
+  stroke: #666;
+  stroke-linecap: round;
+  stroke-width: 12px;
+  fill: transparent;
+}
+.slider svg circle {
+  fill: #fff9;
+}
+.slider svg#next {
+  right: 5vw;
+}
+.slider svg#prev {
+  left: 5vw;
+}
+svg:hover circle {
+  fill: #000;
+}
+svg:hover path {
+  stroke: #fff;
+}
